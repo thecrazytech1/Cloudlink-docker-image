@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y git
 RUN git clone https://github.com/MikeDev101/cloudlink
 
 RUN mv cloudlink/python/cloudlink /app
+RUN rm -r cloudlink
 
 RUN echo "from cloudlink import server\n" \ 
          "from cloudlink.server.protocols import clpv4\n" \ 
